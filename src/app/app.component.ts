@@ -17,4 +17,16 @@ export class AppComponent {
     'Nombre de cafards vivant dans ma chambre',
     56
   );
+  stat3 = new Statistique(
+    'ld1gdf40-re3d-56eb-89fd-8q3675pdfh4q',
+    'Nombre de nombre dans le nombre',
+    0
+  );
+  tabStat: any[] = [];
+  constructor() {
+    this.tabStat.push(this.stat1, this.stat2);
+    setTimeout(() => {
+      this.tabStat.push(this.stat3);
+    }, 2000);
+  }
 }

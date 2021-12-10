@@ -1,6 +1,5 @@
 <div>
-  <ul>
-    <li>{{ stat1.title }}</li>
-    <li>{{ stat2.title }}</li>
-  </ul>
+  <div *ngFor="let s of tabStat">
+    <app-display-stat [statistique]="s"></app-display-stat>
+  </div>
 </div>

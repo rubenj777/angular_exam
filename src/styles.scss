@@ -6,8 +6,9 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
+
   nav {
-    background-color: rgb(150, 150, 190);
+    background-color: rgb(75, 140, 100);
     padding: 0;
     margin: 0;
     width: 100%;
@@ -25,7 +26,7 @@ body {
           display: block;
           padding: 15px;
           &:hover {
-            background-color: rgb(120, 120, 150);
+            background-color: rgb(80, 120, 110);
           }
         }
       }

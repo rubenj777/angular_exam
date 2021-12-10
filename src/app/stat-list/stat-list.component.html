@@ -1,5 +1,5 @@
 <div>
   <div *ngFor="let s of tabStat">
-    <app-display-stat [stat]="s"></app-display-stat>
+    <app-display-stat [stat]="s" (deleteStat)="delete(s)"></app-display-stat>
   </div>
 </div>

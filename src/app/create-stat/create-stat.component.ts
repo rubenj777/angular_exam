@@ -24,5 +24,6 @@ export class CreateStatComponent implements OnInit {
     let newStat = new Statistique(this.title, this.id, this.value);
     this.statService.tabStat.push(newStat);
   }
+
   ngOnInit(): void {}
 }

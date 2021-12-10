@@ -14,6 +14,7 @@ export class DisplayStatComponent implements OnInit {
 
   delete() {
     this.deleteStat.emit();
+    console.log('ok1');
   }
 
   ngOnInit(): void {}

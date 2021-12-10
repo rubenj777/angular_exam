@@ -1,5 +1,11 @@
-<div>
-  <div *ngFor="let s of tabStat">
-    <app-display-stat [statistique]="s"></app-display-stat>
-  </div>
-</div>
+<nav>
+  <ul>
+    <li>
+      <a routerLink="/stat-list" routerLinkActive="active">Stat list</a>
+    </li>
+    <li>
+      <a routerLink="/create-stat" routerLinkActive="active">Create Stat</a>
+    </li>
+  </ul>
+</nav>
+<router-outlet></router-outlet>

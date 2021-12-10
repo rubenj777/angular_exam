@@ -1,6 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
 import { Statistique } from '../models/statistique';
-import { StatistiqueService } from '../statistique.service';
 
 @Component({
   selector: 'app-display-stat',
@@ -8,9 +7,14 @@ import { StatistiqueService } from '../statistique.service';
   styleUrls: ['./display-stat.component.scss'],
 })
 export class DisplayStatComponent implements OnInit {
-  @Input() public statistique!: Statistique;
+  @Input() public stat!: Statistique;
+  @Output() deleteStat = new EventEmitter<void>();
 
   constructor() {}
+
+  delete() {
+    this.deleteStat.emit();
+  }
 
   ngOnInit(): void {}
 }

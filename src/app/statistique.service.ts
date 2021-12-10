@@ -1,12 +1,18 @@
 import { Injectable } from '@angular/core';
 import { Statistique } from './models/statistique';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class StatistiqueService {
-  public tabStat: any[] = [];
-  constructor() {
+  public tabStat: Statistique[] = [];
+  public getData(): Observable<Object> {
+    return this.clientHttp.get('https://stats.naminilamy.fr/');
+  }
+
+  constructor(private clientHttp: HttpClient) {
     let stat1 = new Statistique(
       'fa1f5f40-be3b-11eb-91ec-7f5875ecfb46',
       'Nombre de gâteaux que j`ai mangé aujourd`hui',
@@ -22,6 +28,7 @@ export class StatistiqueService {
       'Nombre de nombre dans le nombre',
       0
     );
+
     this.tabStat.push(stat1, stat2);
     setTimeout(() => {
       this.tabStat.push(stat3);

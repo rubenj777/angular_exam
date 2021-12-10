@@ -19,5 +19,12 @@ export class StatListComponent implements OnInit {
     console.log('ok');
   }
 
-  ngOnInit(): void {}
+  ngOnInit() {
+    this.statService.getData().subscribe((response) => {
+      console.log(response);
+      for (const r of response as any) {
+        this.tabStat.push(new Statistique(r.id, r.title, r.value));
+      }
+    });
+  }
 }

@@ -7,6 +7,7 @@ import { DisplayStatComponent } from './display-stat/display-stat.component';
 import { StatListComponent } from './stat-list/stat-list.component';
 import { CreateStatComponent } from './create-stat/create-stat.component';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,7 @@ import { FormsModule } from '@angular/forms';
     StatListComponent,
     CreateStatComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })
